@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Bản đồ (Map Fragment) -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="16dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Nút Football với icon và chữ -->
+            <LinearLayout
+                android:id="@+id/Football"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_corners"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/image_football"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/soccer_field"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_football"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Football"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Nút Basketball với icon và chữ -->
+            <LinearLayout
+                android:id="@+id/Basketball"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_corners"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/image_basketball"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/basketball"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_basketball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basketball"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Nút Tennis với icon và chữ -->
+            <LinearLayout
+                android:id="@+id/Tennis"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_corners"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/image_tennis"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/tennis"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_tennis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tennis"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <!-- Nút PickleBall với icon và chữ -->
+            <LinearLayout
+                android:id="@+id/PickleBall"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_corners"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/image_pickleball"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/racket"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_pickleball"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PickleBall"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</FrameLayout>
