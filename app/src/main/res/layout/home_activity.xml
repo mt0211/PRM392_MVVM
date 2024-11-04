@@ -251,7 +251,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
-                    android:background="null"
+                    android:background="@null"
                     android:contentDescription="Home"
                     android:scaleType="fitCenter"
                     android:src="@drawable/home" />
@@ -269,7 +269,7 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:contentDescription="Map"
-                    android:background="null"
+                    android:background="@null"
                     android:layout_gravity="center"
                     android:scaleType="centerInside"
                     android:src="@drawable/map" />
@@ -284,7 +284,7 @@
 
                 <ImageButton
                     android:id="@+id/buttonList"
-                    android:background="null"
+                    android:background="@null"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
@@ -302,7 +302,7 @@
 
                 <ImageButton
                     android:id="@+id/buttonChat"
-                    android:background="null"
+                    android:background="@null"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
@@ -320,7 +320,7 @@
 
                 <ImageButton
                     android:id="@+id/buttonUser"
-                    android:background="null"
+                    android:background="@null"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
