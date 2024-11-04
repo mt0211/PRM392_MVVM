@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <!-- Hình ảnh -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bromo Tengger Semeru"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Địa điểm -->
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Probolinggo, East Java • 14km"
+        android:textColor="#777"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/title"
+        android:paddingTop="4dp" />
+
+    <!-- Giá tiền -->
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$12k/Trip"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingEnd="16dp" />
+
+    <!-- Đánh giá -->
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.9/5 (137 Reviews)"
+        android:textColor="#777"
+        app:layout_constraintTop_toBottomOf="@id/location"
+        app:layout_constraintStart_toStartOf="@id/location"
+        android:paddingTop="4dp" />
+
+    <!-- Kích thước nhóm và thời gian chuyến đi -->
+    <LinearLayout
+        android:id="@+id/info_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/group_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Max 12 Group Size"
+            android:textColor="#333"
+            android:drawableStart="@drawable/back_arrow"
+        android:drawablePadding="8dp" />
+
+        <TextView
+            android:id="@+id/trip_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4 Day Trip Duration"
+            android:textColor="#333"
+            android:drawableStart="@drawable/back_arrow"
+        android:drawablePadding="8dp" />
+    </LinearLayout>
+
+    <!-- Mô tả -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bromo Tengger Semeru National Park, located in East Java, Indonesia, features active volcanoes, rugged landscapes, and the iconic Mount Bromo. It’s a popular destination for hiking, sunrise views, and stunning volcanic scenery."
+        android:textColor="@android:color/black"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/info_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mở trên bản đồ -->
+    <TextView
+        android:id="@+id/open_in_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open on maps"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="16dp" />
+
+    <!-- Nút đặt chỗ -->
+    <Button
+        android:id="@+id/booking_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Booking"
+        android:backgroundTint="@color/primaryColor"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/open_in_maps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

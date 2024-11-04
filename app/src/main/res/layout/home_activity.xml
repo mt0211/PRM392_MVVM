@@ -8,7 +8,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="80dp"
         android:background="#73C821"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.4"
@@ -20,70 +20,70 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginTop="10dp">
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_marginTop="10dp">-->
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="20sp"
-                    android:text="Welcome !"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:id="@+id/textView6"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginStart="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginTop="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textSize="20sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:text="Welcome !"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView2"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="USER"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:id="@+id/textView5"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginStart="20dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginTop="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:text="USER"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textSize="25sp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView2"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/textView6" />&ndash;&gt;-->
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.434"
-                    tools:srcCompat="@tools:sample/avatars" />
+            <!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:id="@+id/imageView2"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_width="60dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_height="60dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginStart="16dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintVertical_bias="0.434"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    tools:srcCompat="@tools:sample/avatars" />&ndash;&gt;-->
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="30dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.2"
-                    app:srcCompat="@drawable/bell" />
+            <!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:id="@+id/imageView"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_width="50dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    android:layout_marginEnd="30dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:layout_constraintVertical_bias="0.2"&ndash;&gt;-->
+            <!--&lt;!&ndash;                    app:srcCompat="@drawable/bell" />&ndash;&gt;-->
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="  Discover the best app to book turf"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold|italic" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/textView4"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:text="  Discover the best app to book turf"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="25sp"-->
+            <!--                android:textStyle="bold|italic" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -222,9 +222,9 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/customToolbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/bg_toolbar"
         app:layout_constraintBottom_toBottomOf="parent"

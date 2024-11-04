@@ -11,4 +11,11 @@
     <color name="b1">#fef8e7</color>
     <color name="b2">#f2ffee</color>
     <color name="b3">#fffbf3</color>
+    <color name="green2">#3A5C41</color>
+    <color name="green3">#26662c</color>
+    <color name="lightgreen">#f7f6f2</color>
+
+    <color name="primaryColor">#6200EE</color>
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="toolbarShadow">#40000000</color>
 </resources>

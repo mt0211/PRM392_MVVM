@@ -5,4 +5,9 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#26662c</item>
     </style>
+    <style name="CustomImageViewShape">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#26662c</item>
+    </style>
 </resources>

@@ -72,7 +72,7 @@ public class FieldListActivity extends AppCompatActivity {
         recyclerViewFields = findViewById(R.id.recyclerViewFields);
         recyclerViewFields.setLayoutManager(new LinearLayoutManager(this));
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
-        recyclerViewFields.addItemDecoration(new SpacingItemDecoration(spacingInPixels));
+       // recyclerViewFields.addItemDecoration(new SpacingItemDecoration(spacingInPixels));
         fieldAdapter = new FieldAdapter(this, new ArrayList<>(), db);
         recyclerViewFields.setAdapter(fieldAdapter);
 
