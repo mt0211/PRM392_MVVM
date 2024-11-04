@@ -36,28 +36,33 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category category = categories.get(position);
         holder.categoryName.setText(category.getName());
-//        Glide.with(context)
-//                .load(category.getImageResId())  // Updated to match the correct method
-//                .placeholder(R.drawable.pic1)
-//                .into(holder.categoryImage);
+        Glide.with(context)
+                .load(category.getImageResId()) // Đảm bảo phương thức này trả về ID đúng
+                .placeholder(R.drawable.pic1) // Hình ảnh hiển thị trong thời gian tải
+                .into(holder.categoryImage);
     }
-
-
 
     @Override
     public int getItemCount() {
-        return categories.size();
+        return categories != null ? categories.size() : 0; // Tránh lỗi NullPointerException
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+        notifyDataSetChanged(); // Cập nhật RecyclerView khi danh sách categories thay đổi
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView categoryName;
-        //ImageView categoryImage;
+        ImageView categoryImage;
 
         ViewHolder(View itemView) {
             super(itemView);
             categoryName = itemView.findViewById(R.id.textViewCategoryName);
-           // categoryImage = itemView.findViewById(R.id.textViewCategoryImage);
+            categoryImage = itemView.findViewById(R.id.textViewCategoryImage); // Sửa lại ID
         }
     }
-
 }
+
+
+

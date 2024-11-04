@@ -34,13 +34,6 @@ public class Field {
         this.startTime = startTime;
     }
 
-    public int getBookingDuration() {
-        return bookingDuration;
-    }
-
-    public void setBookingDuration(int bookingDuration) {
-        this.bookingDuration = bookingDuration;
-    }
 
     public String getEndTime() {
         return endTime;
@@ -74,12 +67,25 @@ public class Field {
         this.categoryId = categoryId;
     }
 
+
+    public Field() {
+    }
+
     @PrimaryKey(autoGenerate = true)
     private int fieldId;
     private int freeSlots;
     private String startTime;
     private String endTime;
-    private int bookingDuration;
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    private int duration;
     private String location;
     private String description;
 
@@ -87,11 +93,11 @@ public class Field {
     private int categoryId;
 
     // Constructor
-    public Field(int freeSlots, String startTime, String endTime, int bookingDuration, String location, String description, int categoryId) {
+    public Field(int freeSlots, String startTime, String endTime, int duration, String location, String description, int categoryId) {
         this.freeSlots = freeSlots;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.bookingDuration = bookingDuration;
+        this.duration = duration;
         this.location = location;
         this.description = description;
         this.categoryId = categoryId;

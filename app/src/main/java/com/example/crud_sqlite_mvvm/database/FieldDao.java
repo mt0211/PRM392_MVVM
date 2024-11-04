@@ -14,7 +14,7 @@ import java.util.List;
 @Dao
 public interface FieldDao {
     @Insert
-    long insert(Field field);
+    long insert(Field field); // Phương thức để thêm trường
 
     @Update
     void update(Field field);
@@ -30,5 +30,5 @@ public interface FieldDao {
 
     @Query("SELECT * FROM field")
     List<Field> getAllFieldsSync();
-
 }
+

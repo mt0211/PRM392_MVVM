@@ -1,5 +1,7 @@
 package com.example.crud_sqlite_mvvm.viewmodel;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -17,11 +19,13 @@ public class FieldViewModel extends ViewModel {
 
     public FieldViewModel(FieldDao fieldDao) {
         this.fieldDao = fieldDao;
-        this.fields = fieldDao.getAllFields();
+        this.fields = fieldDao.getAllFields(); // Initialize fields LiveData
     }
 
     public LiveData<List<Field>> getFields() {
-        return fields;
+        // Return the existing LiveData instead of creating a new one
+        Log.d("FieldViewModel", "Fields loaded: " + (fields.getValue() != null ? fields.getValue().size() : "null"));
+        return fields; // Return the initialized LiveData
     }
 
     public void insert(Field field) {

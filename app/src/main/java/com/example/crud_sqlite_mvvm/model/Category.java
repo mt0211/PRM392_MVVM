@@ -9,7 +9,7 @@ public class Category {
     @PrimaryKey(autoGenerate = true)
     private int categoryId;
     private String name;
-    private int imageResId; // Sử dụng int để lưu ID hình ảnh
+    private int imageResId;
 
     // Constructor
     public Category(String name, int imageResId) {
