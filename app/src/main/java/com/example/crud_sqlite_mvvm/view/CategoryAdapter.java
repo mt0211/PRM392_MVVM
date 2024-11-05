@@ -18,6 +18,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     private List<Category> categories;
     private Context context;
+    private OnCategoryClickListener onCategoryClickListener;
+
+    public interface OnCategoryClickListener {
+        void onCategoryClick(Category category);
+    }
+    public void setOnCategoryClickListener(OnCategoryClickListener listener) {
+        this.onCategoryClickListener = listener;
+    }
 
     // Constructor cho adapter
     public CategoryAdapter(Context context, List<Category> categories) {
@@ -36,15 +44,20 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category category = categories.get(position);
         holder.categoryName.setText(category.getName());
+        holder.itemView.setOnClickListener(v -> {
+            if (onCategoryClickListener != null) {
+                onCategoryClickListener.onCategoryClick(category);
+            }
+        });
         Glide.with(context)
-                .load(category.getImageResId()) // Đảm bảo phương thức này trả về ID đúng
-                .placeholder(R.drawable.pic1) // Hình ảnh hiển thị trong thời gian tải
+                .load(category.getImageResId())
+                .placeholder(R.drawable.pic1)
                 .into(holder.categoryImage);
     }
 
     @Override
     public int getItemCount() {
-        return categories != null ? categories.size() : 0; // Tránh lỗi NullPointerException
+        return categories != null ? categories.size() : 0;
     }
 
     public void setCategories(List<Category> categories) {
@@ -59,7 +72,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         ViewHolder(View itemView) {
             super(itemView);
             categoryName = itemView.findViewById(R.id.textViewCategoryName);
-            categoryImage = itemView.findViewById(R.id.textViewCategoryImage); // Sửa lại ID
+            categoryImage = itemView.findViewById(R.id.textViewCategoryImage);
         }
     }
 }

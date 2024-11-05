@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -38,6 +39,8 @@ public class MapsFragment extends Fragment {
     private View rootView;
     private List<FieldMap> Fields;
     private Location fptUniversityLocation;
+    private String selectedCategoryType = "";
+
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
         @Override
@@ -113,8 +116,14 @@ public class MapsFragment extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
-
         setupFieldButtons(rootView);
+        // Set up back button
+        ImageButton btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            if (getActivity() != null) {
+                getActivity().onBackPressed();
+            }
+        });
     }
 
     private void setupFieldButtons(View view) {
@@ -123,10 +132,21 @@ public class MapsFragment extends Fragment {
         LinearLayout buttonTennis = view.findViewById(R.id.Tennis);
         LinearLayout buttonPickleBall = view.findViewById(R.id.PickleBall);
 
-        buttonFootball.setOnClickListener(v -> filterMarkers("Football"));
-        buttonBasketball.setOnClickListener(v -> filterMarkers("Basketball"));
-        buttonTennis.setOnClickListener(v -> filterMarkers("Tennis"));
-        buttonPickleBall.setOnClickListener(v -> filterMarkers("PickleBall"));
+        buttonFootball.setOnClickListener(v -> toggleFilter("Football"));
+        buttonBasketball.setOnClickListener(v -> toggleFilter("Basketball"));
+        buttonTennis.setOnClickListener(v -> toggleFilter("Tennis"));
+        buttonPickleBall.setOnClickListener(v -> toggleFilter("PickleBall"));
+    }
+
+    // Phương thức để bật/tắt bộ lọc
+    private void toggleFilter(String selectedType) {
+        if (selectedCategoryType.equals(selectedType)) {
+            selectedCategoryType = "";
+            resetMarkers();
+        } else {
+            selectedCategoryType = selectedType;
+            filterMarkers(selectedType);
+        }
     }
 
     private void filterMarkers(String selectedType) {
@@ -143,6 +163,19 @@ public class MapsFragment extends Fragment {
                         .title(field.getName())
                         .icon(field.getMarkerIcon()));
             }
+        }
+    }
+
+    private void resetMarkers() {
+        googleMap.clear();
+        googleMap.addMarker(new MarkerOptions().position(DEFAULT_LOCATION).title("Trường Đại Học FPT Cần Thơ"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DEFAULT_LOCATION, DEFAULT_ZOOM_LEVEL));
+
+        for (FieldMap field : Fields) {
+            googleMap.addMarker(new MarkerOptions()
+                    .position(field.getLatLng())
+                    .title(field.getName())
+                    .icon(field.getMarkerIcon()));
         }
     }
 }
