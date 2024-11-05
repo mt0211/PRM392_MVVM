@@ -121,10 +121,12 @@ public class FieldListActivity extends AppCompatActivity {
         new Thread(() -> {
             FieldDao fieldDao = AppDatabase.getInstance(this).fieldDao();
             // Sử dụng categoryId để tạo các Field mới
+
             Field field1 = new Field(5, "09:00", "11:00", 90, "HCM City", "You can have 5v5 or 7v7 match in this field", (int) categoryId1);
             Field field2 = new Field(10, "08:00", "14:00", 60, "Can Tho", "Hope you enjoy it", (int) categoryId2);
             Field field3 = new Field(3, "09:00", "15:00", 180, "Kien Giang", "Hope you enjoy it", (int) newCategoryId3);
             Field field4 = new Field(15, "08:00", "14:00", 60, "Ha Noi", "Hope you enjoy it", (int) newCategoryId4);
+
             fieldDao.insert(field1);
             fieldDao.insert(field2);
             fieldDao.insert(field3);
