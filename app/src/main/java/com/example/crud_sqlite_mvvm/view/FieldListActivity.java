@@ -113,8 +113,8 @@ public class FieldListActivity extends AppCompatActivity {
         new Thread(() -> {
             FieldDao fieldDao = AppDatabase.getInstance(this).fieldDao();
             // Sử dụng categoryId để tạo các Field mới
-            Field field1 = new Field(10, "09:00", "11:00", 90, "Location 1", "Description 1", (int) categoryId1);
-            Field field2 = new Field(10, "08:00", "14:00", 60, "Location 2", "Description 2", (int) categoryId2);
+            Field field1 = new Field(11, "San A", "09:00", "11:00", 90, "Location 1", "Description 1", (int) categoryId1);
+            Field field2 = new Field(10, "San B", "08:00", "14:00", 60, "Location 2", "Description 2", (int) categoryId2);
             fieldDao.insert(field1);
             fieldDao.insert(field2);
             Log.d("FieldListActivity", "Fields have been inserted.");

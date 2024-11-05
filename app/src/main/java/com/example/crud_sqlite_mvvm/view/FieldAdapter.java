@@ -59,7 +59,7 @@ public class FieldAdapter extends RecyclerView.Adapter<FieldAdapter.ViewHolder> 
         holder.time.setText(field.getStartTime() + " - " + field.getEndTime());
         holder.location.setText(field.getLocation());
         holder.duration.setText(String.valueOf(field.getDuration()+ " minutes"));
-
+        holder.fieldName.setText(field.getFieldName());
 //        List<Integer> imageResIds = getImagesFromCategory(field.getCategoryId());
 //
 //        if (imageResIds.isEmpty()) {
@@ -116,6 +116,7 @@ public class FieldAdapter extends RecyclerView.Adapter<FieldAdapter.ViewHolder> 
         TextView time;
         TextView location;
         TextView duration;
+        TextView fieldName;
  //       ViewPager2 viewPager;
         LinearLayout dotsIndicator;
 
@@ -128,6 +129,7 @@ public class FieldAdapter extends RecyclerView.Adapter<FieldAdapter.ViewHolder> 
             time = itemView.findViewById(R.id.textViewTime);
             location = itemView.findViewById(R.id.textViewLocation);
             dotsIndicator = itemView.findViewById(R.id.dotsIndicator);
+            fieldName = itemView.findViewById(R.id.txtFieldName);
         }
     }
 }
