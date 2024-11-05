@@ -21,9 +21,8 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- ViewPager2 để hiển thị 3 hình ảnh -->
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPagerImages"
+            <ImageView
+                android:id="@+id/viewImage"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -65,7 +64,7 @@
 
                 <!-- TextView ở giữa -->
                 <TextView
-                    android:id="@+id/textViewFreeSlot"
+                    android:id="@+id/textViewName"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -163,32 +162,45 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:gravity="left"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
 
+                <!-- LinearLayout cho hình ảnh và vị trí -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center">
 
                     <ImageView
+                        android:layout_marginStart="75dp"
                         android:layout_width="30dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center"
-                        android:layout_marginEnd="5dp"
                         android:src="@drawable/location" />
-                    <!-- TextView bên dưới -->
+
                     <TextView
                         android:id="@+id/textViewLocation"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </LinearLayout>
+
+                <!-- TextView cho số lượng chỗ trống -->
+                <TextView
+                    android:id="@+id/textViewFreeSlot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="60dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold" />
             </LinearLayout>
+
 
             <!-- Hàng thứ tư -->
             <LinearLayout

@@ -10,6 +10,38 @@ import androidx.room.PrimaryKey;
         childColumns = "category_id",
         onDelete = ForeignKey.CASCADE))
 public class Field {
+    @PrimaryKey(autoGenerate = true)
+    private int fieldId;
+    private int freeSlots;
+    private String startTime;
+    private String endTime;
+    private int duration;
+    private String location;
+    private String description;
+    private String fieldName;
+    @ColumnInfo(name = "category_id")
+    private int categoryId;
+
+    // Thêm thuộc tính để lưu trữ ID tài nguyên hình ảnh
+    private int imageResId;
+
+    public Field() {
+    }
+
+    // Constructor
+    public Field(int freeSlots, String startTime, String endTime, int duration, String location, String description, int categoryId, int imageResId, String fieldName) {
+        this.freeSlots = freeSlots;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.duration = duration;
+        this.location = location;
+        this.description = description;
+        this.categoryId = categoryId;
+        this.imageResId = imageResId;
+        this.fieldName = fieldName;
+    }
+
+    // Getter và Setter cho các thuộc tính
     public int getFieldId() {
         return fieldId;
     }
@@ -33,7 +65,6 @@ public class Field {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
-
 
     public String getEndTime() {
         return endTime;
@@ -67,16 +98,6 @@ public class Field {
         this.categoryId = categoryId;
     }
 
-
-    public Field() {
-    }
-
-    @PrimaryKey(autoGenerate = true)
-    private int fieldId;
-    private int freeSlots;
-    private String startTime;
-    private String endTime;
-
     public int getDuration() {
         return duration;
     }
@@ -84,22 +105,19 @@ public class Field {
     public void setDuration(int duration) {
         this.duration = duration;
     }
+    public String getFieldName() {
+        return fieldName;
+    }
 
-    private int duration;
-    private String location;
-    private String description;
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
+    // Getter và Setter cho thuộc tính imageResId
+    public int getImageResId() {
+        return imageResId;
+    }
 
-    @ColumnInfo(name = "category_id")
-    private int categoryId;
-
-    // Constructor
-    public Field(int freeSlots, String startTime, String endTime, int duration, String location, String description, int categoryId) {
-        this.freeSlots = freeSlots;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.duration = duration;
-        this.location = location;
-        this.description = description;
-        this.categoryId = categoryId;
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
     }
 }

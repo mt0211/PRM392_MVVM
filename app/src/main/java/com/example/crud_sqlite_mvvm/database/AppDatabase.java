@@ -13,7 +13,7 @@ import com.example.crud_sqlite_mvvm.model.FieldImage;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Field.class, Category.class, FieldImage.class}, version = 5)
+@Database(entities = {Field.class, Category.class, FieldImage.class}, version = 7)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract FieldDao fieldDao();
     public abstract CategoryDao categoryDao();

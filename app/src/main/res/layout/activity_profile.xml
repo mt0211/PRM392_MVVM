@@ -9,7 +9,7 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_height="250dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"> <!-- Căn giữa theo chiều dọc -->
 
             <FrameLayout
@@ -101,6 +102,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"> <!-- Căn giữa theo chiều dọc -->
 
             <FrameLayout
@@ -139,6 +141,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"> <!-- Căn giữa theo chiều dọc -->
 
             <FrameLayout
@@ -177,6 +180,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="8dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"> <!-- Căn giữa theo chiều dọc -->
 
             <FrameLayout
@@ -215,10 +219,11 @@
     <include
         layout="@layout/custom_toolbar"
         android:id="@+id/customToolbar"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottom_layout"
         app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
