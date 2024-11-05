@@ -30,5 +30,9 @@ public interface FieldDao {
 
     @Query("SELECT * FROM field")
     List<Field> getAllFieldsSync();
+
+    @Query("SELECT * FROM field WHERE category_id = :categoryId")
+    LiveData<List<Field>> getFieldsByCategory(long categoryId);
+
 }
 

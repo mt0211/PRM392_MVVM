@@ -27,6 +27,9 @@ public class FieldViewModel extends ViewModel {
         Log.d("FieldViewModel", "Fields loaded: " + (fields.getValue() != null ? fields.getValue().size() : "null"));
         return fields; // Return the initialized LiveData
     }
+    public LiveData<List<Field>> getFieldsByCategory(long categoryId) {
+        return fieldDao.getFieldsByCategory(categoryId);
+    }
 
     public void insert(Field field) {
         executorService.execute(() -> {

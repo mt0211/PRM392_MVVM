@@ -148,4 +148,14 @@
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
+    <!-- Nút Back -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_arrow"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back" />
 </FrameLayout>

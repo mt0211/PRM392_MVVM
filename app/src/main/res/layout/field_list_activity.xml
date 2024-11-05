@@ -36,114 +36,13 @@
         android:nestedScrollingEnabled="false" />
 
     <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
+    <include
+        layout="@layout/custom_toolbar"
         android:id="@+id/customToolbar"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bg_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonHome"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="Home"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/home" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonMap"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="Map"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/map" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonList"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="List"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/list_text" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonChat"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="Chat"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/chat" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonUser"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="@null"
-                    android:contentDescription="User"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/user" />
-            </FrameLayout>
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
-
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

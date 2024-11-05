@@ -26,9 +26,17 @@
         <activity
             android:name=".view.UpdateActivity"
             android:exported="false" />
-        <!--            android:name=".view.FieldListActivity"            -->
         <activity
             android:name=".view.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FirstScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FieldListActivity"
 
             android:exported="true">
             <intent-filter>
