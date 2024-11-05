@@ -18,5 +18,7 @@
     <color name="primaryColor">#6200EE</color>
     <color name="secondaryColor">#03DAC5</color>
     <color name="toolbarShadow">#40000000</color>
+    <color name="green_background">#4CAF50</color>
+
 
 </resources>

@@ -1,339 +1,377 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0FFF0"
+    tools:context=".view.MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#73C821"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:layout_marginTop="10dp">-->
-
-<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/textView6"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginStart="20dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginTop="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textSize="20sp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:text="Welcome !"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/textView5"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginStart="20dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginTop="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:text="USER"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textSize="25sp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:textStyle="bold"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintStart_toEndOf="@+id/imageView2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintTop_toBottomOf="@+id/textView6" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/imageView2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="60dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="60dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginStart="16dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintVertical_bias="0.434"&ndash;&gt;-->
-<!--&lt;!&ndash;                    tools:srcCompat="@tools:sample/avatars" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:id="@+id/imageView"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="50dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="40dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_marginEnd="30dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:layout_constraintVertical_bias="0.2"&ndash;&gt;-->
-<!--&lt;!&ndash;                    app:srcCompat="@drawable/bell" />&ndash;&gt;-->
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView4"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:text="  Discover the best app to book turf"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:textSize="25sp"-->
-<!--                android:textStyle="bold|italic" />-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp">
-
-                <EditText
-                    android:id="@+id/editTextText"
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="5"
-                    android:background="@drawable/search_background"
-                    android:drawableStart="@drawable/search_icon"
-                    android:drawablePadding="10dp"
-                    android:ems="10"
-                    android:hint="Search"
-                    android:inputType="text"
-                    android:padding="16dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/setting_background">
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/settings" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- Popular Section with 'See All' button -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/popularSection"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollView">
+        android:orientation="horizontal"
+        android:layout_margin="16dp">
 
         <TextView
-            android:id="@+id/textViewPopular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Popular"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/greeting_text1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="Xin chào👋"
+            android:textColor="#388E3C"
+            android:textSize="35sp" />
 
-        <TextView
-            android:id="@+id/textViewSeeAllPopular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="See All"
-            android:textColor="@color/orange"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/greeting_text2"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo_ssb"
+            android:layout_weight="1" />
 
-    <!-- RecyclerView for Popular section -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view_pop"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/popularSection"
-        />
+    </LinearLayout>
 
-    <!-- Category Section with 'See All' button -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/categorySection"
+
+    <!-- Search Bar -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_pop">
+        android:orientation="horizontal"
+        android:background="@drawable/search_background"
+        android:padding="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp">
 
-        <TextView
-            android:id="@+id/textViewCategory"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search_icon"
+            app:tint="#388E3C" />
+
+        <EditText
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Category"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_weight="1"
+            android:hint="Tìm kiếm"
+            android:textColor="#388E3C"
+            android:background="@null"
+            android:paddingStart="8dp" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/textViewSeeAllCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="See All"
-            android:textColor="#FF5722"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- RecyclerView for Category section -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/view_cat"
+    <!-- Sessions List -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/categorySection"
-        />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/customToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/bg_toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_cat"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:layout_editor_absoluteX="10dp" >
-
+        <!-- Session Card 1 -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="15dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_toolbar_item">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Football"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
 
-                <ImageButton
-                    android:id="@+id/buttonHome"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:background="null"
-                    android:contentDescription="Home"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/home" />
-            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#BBDEFB"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonMap"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="Map"
-                    android:background="null"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/map" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonList"
-                    android:background="null"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="List"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/list_text" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonChat"
-                    android:background="null"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="Chat"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/chat" />
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/bg_toolbar_item">
-
-                <ImageButton
-                    android:id="@+id/buttonUser"
-                    android:background="null"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="User"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/user" />
-            </FrameLayout>
-
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#BBDEFB" />
         </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
 
+        <!-- Session Card 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background_white"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pickle Ball"
+                android:textColor="#388E3C"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
 
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#388E3C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <!-- Session Card 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tennis"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#BBDEFB"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#BBDEFB" />
+        </LinearLayout>
+
+        <!-- Session Card 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background_white"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Table tennis"
+                android:textColor="#388E3C"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#388E3C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <!-- Session Card 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baseball"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#BBDEFB"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#BBDEFB" />
+        </LinearLayout>
+
+        <!-- Session Card 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background_white"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Golf"
+                android:textColor="#388E3C"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#388E3C" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <!-- Session Card 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volleyball"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#BBDEFB"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#BBDEFB" />
+        </LinearLayout>
+
+        <!-- Session Card 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background_white"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Badminton"
+                android:textColor="#388E3C"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 100 facilities"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_play"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                app:tint="#388E3C" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
