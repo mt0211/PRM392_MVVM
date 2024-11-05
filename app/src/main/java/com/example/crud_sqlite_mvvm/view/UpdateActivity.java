@@ -19,68 +19,72 @@ import com.example.crud_sqlite_mvvm.model.User;
 import com.example.crud_sqlite_mvvm.viewmodel.UserViewModel;
 
 public class UpdateActivity extends AppCompatActivity {
-    private EditText editUsername;
+    private EditText editEmail;
+    private EditText editPhone;
     private EditText editAddress;
-    private Button buttonUpdateUser;
-
-
-    private User user;
-    private UserViewModel userViewModel;  // Thêm UserViewModel
+    private EditText editBirthDate;
+    private Button btnUpdateUser;
+    private User user; // Variable to hold user data
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_update);
+        setContentView(R.layout.activity_update); // Make sure you create this layout
 
-        // Khởi tạo các view
-        editUsername = findViewById(R.id.edit_username);
+        editEmail = findViewById(R.id.edit_email);
+        editPhone = findViewById(R.id.edit_phone);
         editAddress = findViewById(R.id.edit_address);
-        buttonUpdateUser = findViewById(R.id.btnUpdateUser);
+        editBirthDate = findViewById(R.id.edit_birth_date);
+        btnUpdateUser = findViewById(R.id.btnUpdateUser);
 
-        // Khởi tạo ViewModel
-        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        // Retrieve user data from Intent
+        user = (User) getIntent().getSerializableExtra("object_user");
 
-        // Nhận dữ liệu từ Intent
-        user = (User) getIntent().getExtras().get("object_user");
+        // Populate fields with existing user data
         if (user != null) {
-            editUsername.setText(user.getUsername());
+
+            editEmail.setText(user.getEmail()); // Assuming the User model has this method
+            editPhone.setText(user.getPhone()); // Assuming the User model has this method
             editAddress.setText(user.getAddress());
-        } else {
-            Toast.makeText(this, "User data not found", Toast.LENGTH_SHORT).show();
+            editBirthDate.setText(user.getDateOfBirth()); // Assuming the User model has this method
         }
 
-        // Xử lý sự kiện nhấn nút Cập nhật
-        buttonUpdateUser.setOnClickListener(new View.OnClickListener() {
+        // Set click listener for update button
+        btnUpdateUser.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                updateUser();
+            public void onClick(View v) {
+                // Update user object with new data
+                if (TextUtils.isEmpty(editEmail.getText().toString())) {
+                    Toast.makeText(UpdateActivity.this, "Email cannot be empty", Toast.LENGTH_SHORT).show();
+                    return; // Exit the method if email is empty
+                }
+
+                if (TextUtils.isEmpty(editPhone.getText().toString())) {
+                    Toast.makeText(UpdateActivity.this, "Phone cannot be empty", Toast.LENGTH_SHORT).show();
+                    return; // Exit the method if phone is empty
+                }
+
+                if (TextUtils.isEmpty(editAddress.getText().toString())) {
+                    Toast.makeText(UpdateActivity.this, "Address cannot be empty", Toast.LENGTH_SHORT).show();
+                    return; // Exit the method if address is empty
+                }
+
+                if (TextUtils.isEmpty(editBirthDate.getText().toString())) {
+                    Toast.makeText(UpdateActivity.this, "Birthdate cannot be empty", Toast.LENGTH_SHORT).show();
+                    return; // Exit the method if birthdate is empty
+                }
+
+                user.setEmail(editEmail.getText().toString()); // Set email
+                user.setPhone(editPhone.getText().toString()); // Set phone
+                user.setAddress(editAddress.getText().toString());
+                user.setDateOfBirth(editBirthDate.getText().toString()); // Set birth date
+
+                // Prepare intent to return updated user
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra("updated_user", user);
+                setResult(RESULT_OK, resultIntent);
+                finish(); // Close this activity
             }
         });
-    }
-
-    private void updateUser() {
-        String username = editUsername.getText().toString().trim();
-        String address = editAddress.getText().toString().trim();
-
-        // Kiểm tra dữ liệu nhập vào
-        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(address)) {
-            Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Cập nhật thông tin user
-        user.setUsername(username);
-        user.setAddress(address);
-
-        // Sử dụng ViewModel để cập nhật user trong cơ sở dữ liệu
-        userViewModel.updateUser(user);
-
-        Toast.makeText(this, "User updated successfully", Toast.LENGTH_SHORT).show();
-
-        // Trả về kết quả cho MainActivity và đóng UpdateActivity
-        Intent intentResult = new Intent();
-        setResult(Activity.RESULT_OK, intentResult);
-        finish();
     }
 }
