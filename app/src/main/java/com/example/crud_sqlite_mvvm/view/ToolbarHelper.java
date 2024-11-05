@@ -27,27 +27,27 @@ public class ToolbarHelper {
         });
 
         // Uncomment and add similar checks for other buttons if needed
-        /*
-        // Xử lý sự kiện click cho button Home
-        activity.findViewById(R.id.buttonHome).setOnClickListener(v -> {
-            if (!(activity instanceof HomeActivity)) {
-                activity.startActivity(new Intent(activity, HomeActivity.class));
-            }
-        });
 
-        // Xử lý sự kiện click cho button Chat
-        activity.findViewById(R.id.buttonChat).setOnClickListener(v -> {
-            if (!(activity instanceof ChatActivity)) {
-                activity.startActivity(new Intent(activity, ChatActivity.class));
-            }
-        });
+        // Xử lý sự kiện click cho button Home
+//        activity.findViewById(R.id.buttonHome).setOnClickListener(v -> {
+//            if (!(activity instanceof HomeActivity)) {
+//                activity.startActivity(new Intent(activity, HomeActivity.class));
+//            }
+//        });
+//
+//        // Xử lý sự kiện click cho button Chat
+//        activity.findViewById(R.id.buttonChat).setOnClickListener(v -> {
+//            if (!(activity instanceof ChatActivity)) {
+//                activity.startActivity(new Intent(activity, ChatActivity.class));
+//            }
+//        });
 
         // Xử lý sự kiện click cho button User
         activity.findViewById(R.id.buttonUser).setOnClickListener(v -> {
-            if (!(activity instanceof UserActivity)) {
-                activity.startActivity(new Intent(activity, UserActivity.class));
+            if (!(activity instanceof ProfileActivity)) {
+                activity.startActivity(new Intent(activity, ProfileActivity.class));
             }
         });
-        */
+
     }
 }

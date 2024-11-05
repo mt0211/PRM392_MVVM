@@ -6,40 +6,55 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
+    tools:context=".view.UpdateActivity"
     android:layout_marginTop="14sp"
     android:layout_margin="10dp">
 
     <EditText
-        android:id="@+id/edit_username"
+        android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:hint="User name"
-        />
+        android:hint="Email"
+        android:layout_marginTop="14dp" />
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:hint="Phone"
+        android:layout_marginTop="14dp" />
 
     <EditText
         android:id="@+id/edit_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:layout_marginTop="14dp"
         android:textSize="16sp"
         android:hint="Address"
+        android:layout_marginTop="14dp" />
 
-        />
+    <EditText
+        android:id="@+id/edit_birth_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:hint="Date of Birth"
+        android:layout_marginTop="14dp" />
+
     <Button
         android:id="@+id/btnUpdateUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/design_default_color_on_primary"
         android:textSize="16sp"
-        android:text="update user"
+        android:text="Update User"
         android:layout_gravity="center"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        />
-
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

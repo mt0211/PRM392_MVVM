@@ -24,8 +24,7 @@
             android:value="AIzaSyAN8RpLxinLP9UzluscPoZcwTSZZVFnJtk" />
 
         <activity
-            android:name=".view.UpdateActivity"
-            android:exported="false" />
+            android:name=".view.UpdateActivity"/>
         <activity
             android:name=".view.MainActivity"
             android:exported="false" />
@@ -35,13 +34,22 @@
         <activity
             android:name=".view.MapActivity"
             android:exported="false" />
+        <activity android:name=".view.ProfileActivity" />
+<!--        <activity-->
+<!--            android:name=".view.LoginActivity"-->
+<!--            android:exported="false" />-->
         <activity
-            android:name=".view.FieldListActivity"
+            android:name=".view.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.HomeActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/editTextEmail"
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -41,7 +41,7 @@
             android:padding="10dp" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/editTexUsername"
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -50,12 +50,12 @@
             android:drawableLeft="@drawable/baseline_person_outline_24"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="User name"
             android:inputType="text"
             android:padding="10dp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/editTextPassword"
             android:layout_width="340dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -121,4 +121,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/decorontop"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
