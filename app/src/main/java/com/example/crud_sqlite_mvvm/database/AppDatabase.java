@@ -14,7 +14,7 @@ import com.example.crud_sqlite_mvvm.model.User;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Field.class, Category.class, FieldImage.class, User.class}, version = 6) // Thêm User vào đây
+@Database(entities = {Field.class, Category.class, FieldImage.class, User.class}, version = 7) // Thêm User vào đây
 public abstract class AppDatabase extends RoomDatabase {
     public abstract FieldDao fieldDao();
     public abstract CategoryDao categoryDao();

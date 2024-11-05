@@ -44,8 +44,8 @@ public class ToolbarHelper {
 
         // Xử lý sự kiện click cho button User
         activity.findViewById(R.id.buttonUser).setOnClickListener(v -> {
-            if (!(activity instanceof LoginActivity)) {
-                activity.startActivity(new Intent(activity, LoginActivity.class));
+            if (!(activity instanceof UpdateActivity)) {
+                activity.startActivity(new Intent(activity, UpdateActivity.class));
             }
         });
 

@@ -3,6 +3,7 @@ package com.example.crud_sqlite_mvvm.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -49,7 +50,8 @@ public class LoginActivity extends AppCompatActivity {
             User user = db.userDAO().login(username, password);
             runOnUiThread(() -> {
                 if (user != null) {
-                    Intent intent = new Intent(LoginActivity.this, FieldListActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.putExtra("object_user", user);
                     startActivity(intent);
                     finish();
                 } else {
@@ -58,20 +60,26 @@ public class LoginActivity extends AppCompatActivity {
             });
         }).start();
     }
+
     private void addSampleData() {
         new Thread(() -> {
             // Kiểm tra xem có người dùng nào không
             List<User> userList = db.userDAO().getListUser();
             if (userList.isEmpty()) {
                 // Nếu không có người dùng, thêm người dùng mẫu
-                User user1 = new User("hungloipro123", "Address 1", "user1@example.com", "123");
-                User user2 = new User("user2", "Address 2", "user2@example.com", "password2");
-                User user3 = new User("user3", "Address 3", "user3@example.com", "password3");
+                User user1 = new User("hungloipro123", "Address 1", "user1@example.com", "123", "0969091310", "2003-09-10");
+                User user2 = new User("user2", "Address 2", "user2@example.com", "password2", "0987654321", "1992-02-02");
+                User user3 = new User("user3", "Address 3", "user3@example.com", "password3", "0912345678", "1993-03-03");
 
                 db.userDAO().insertUser(user1);
                 db.userDAO().insertUser(user2);
                 db.userDAO().insertUser(user3);
             }
         }).start();
-}
+    }
+
+    public void signUp(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+    }
 }

@@ -46,6 +46,8 @@ public class UpdateActivity extends AppCompatActivity {
         if (user != null) {
             editUsername.setText(user.getUsername());
             editAddress.setText(user.getAddress());
+        } else {
+            Toast.makeText(this, "User data not found", Toast.LENGTH_SHORT).show();
         }
 
         // Xử lý sự kiện nhấn nút Cập nhật
