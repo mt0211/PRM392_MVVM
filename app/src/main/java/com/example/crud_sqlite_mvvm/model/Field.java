@@ -67,6 +67,13 @@ public class Field {
         this.categoryId = categoryId;
     }
 
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
 
     public Field() {
     }
@@ -74,6 +81,7 @@ public class Field {
     @PrimaryKey(autoGenerate = true)
     private int fieldId;
     private int freeSlots;
+    private String fieldName;
     private String startTime;
     private String endTime;
 
@@ -93,8 +101,10 @@ public class Field {
     private int categoryId;
 
     // Constructor
-    public Field(int freeSlots, String startTime, String endTime, int duration, String location, String description, int categoryId) {
+
+    public Field(int freeSlots, String fieldName, String startTime, String endTime, int duration, String location, String description, int categoryId) {
         this.freeSlots = freeSlots;
+        this.fieldName = fieldName;
         this.startTime = startTime;
         this.endTime = endTime;
         this.duration = duration;
@@ -102,4 +112,5 @@ public class Field {
         this.description = description;
         this.categoryId = categoryId;
     }
+
 }
