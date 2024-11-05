@@ -36,6 +36,9 @@
             android:name=".view.MapActivity"
             android:exported="false" />
         <activity
+            android:name=".view.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.FieldListActivity"
 
             android:exported="true">

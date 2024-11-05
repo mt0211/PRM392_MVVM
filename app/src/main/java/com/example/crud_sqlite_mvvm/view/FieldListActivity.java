@@ -11,9 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.crud_sqlite_mvvm.R;
 import com.example.crud_sqlite_mvvm.database.AppDatabase;
 import com.example.crud_sqlite_mvvm.database.FieldDao;
+import com.example.crud_sqlite_mvvm.database.UserDAO;
 import com.example.crud_sqlite_mvvm.database.CategoryDao;
 import com.example.crud_sqlite_mvvm.model.Category;
 import com.example.crud_sqlite_mvvm.model.Field;
+import com.example.crud_sqlite_mvvm.model.User; // Import User model
 import com.example.crud_sqlite_mvvm.viewmodel.CategoryViewModel;
 import com.example.crud_sqlite_mvvm.viewmodel.CategoryViewModelFactory;
 import com.example.crud_sqlite_mvvm.viewmodel.FieldViewModel;
@@ -31,7 +33,7 @@ public class FieldListActivity extends AppCompatActivity {
     private CategoryViewModel categoryViewModel;
     private FieldViewModel fieldViewModel;
     private List<Category> categories = new ArrayList<>();
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +89,8 @@ public class FieldListActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Add sample users if no users exist
     }
 
     private void onCategoryClick(Category category) {
@@ -101,8 +105,6 @@ public class FieldListActivity extends AppCompatActivity {
         });
     }
 
-
-
     // Thêm danh mục mẫu vào cơ sở dữ liệu
     private void addSampleCategories() {
         new Thread(() -> {
@@ -112,7 +114,7 @@ public class FieldListActivity extends AppCompatActivity {
             long newCategoryId3 = categoryDao.insert(new Category("Basketball", R.drawable.basketball1));
             long newCategoryId4 = categoryDao.insert(new Category("PickleBall", R.drawable.pickle));
             Log.d("FieldListActivity", "Categories have been inserted.");
-            addSampleFields(newCategoryId1, newCategoryId2,newCategoryId3, newCategoryId4); // Insert sample fields with the new category IDs
+            addSampleFields(newCategoryId1, newCategoryId2, newCategoryId3, newCategoryId4); // Insert sample fields with the new category IDs
         }).start();
     }
 
@@ -122,10 +124,10 @@ public class FieldListActivity extends AppCompatActivity {
             FieldDao fieldDao = AppDatabase.getInstance(this).fieldDao();
             // Sử dụng categoryId để tạo các Field mới
 
-            Field field1 = new Field(5, "09:00", "11:00", 90, "HCM City", "You can have 5v5 or 7v7 match in this field", (int) categoryId1);
-            Field field2 = new Field(10, "08:00", "14:00", 60, "Can Tho", "Hope you enjoy it", (int) categoryId2);
-            Field field3 = new Field(3, "09:00", "15:00", 180, "Kien Giang", "Hope you enjoy it", (int) newCategoryId3);
-            Field field4 = new Field(15, "08:00", "14:00", 60, "Ha Noi", "Hope you enjoy it", (int) newCategoryId4);
+            Field field1 = new Field(5,"San bong", "09:00", "11:00", 90, "HCM City", "You can have 5v5 or 7v7 match in this field", (int) categoryId1);
+            Field field2 = new Field(10,"San bong 2", "08:00", "14:00", 60, "Can Tho", "Hope you enjoy it", (int) categoryId2);
+            Field field3 = new Field(3,"San bong 3", "09:00", "15:00", 180, "Kien Giang", "Hope you enjoy it", (int) newCategoryId3);
+            Field field4 = new Field(15,"San bong 4", "08:00", "14:00", 60, "Ha Noi", "Hope you enjoy it", (int) newCategoryId4);
 
             fieldDao.insert(field1);
             fieldDao.insert(field2);
